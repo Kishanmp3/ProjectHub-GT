@@ -5,7 +5,7 @@ const NewProject = () => {
   return (
     <>
       <section className="min-h-[calc(100vh)] h-full flex justify-between items-start px-8">
-        {/* Left Col*/}s
+        {/* Left Col*/}
         <div className="shadow px-8 py-12 rounded bg-surface-200 w-[500px]">
           <div className="flex flex-col gap-y-6">
             <h2 className="w-full flex justify-center text-text mt-8">Create Project</h2>
