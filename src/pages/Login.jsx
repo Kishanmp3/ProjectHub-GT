@@ -29,7 +29,7 @@ const Login = () => {
                     <button className="primary-btn">Login</button>
                     <div className="flex w-full justify-center text-sm gap-x-1">
                         <span>Don't have an account?</span>
-                        <a className="link">Sign up</a>
+                        <Link to="/signup" className="link">Sign up</Link>
                     </div>
                 </div>
 
