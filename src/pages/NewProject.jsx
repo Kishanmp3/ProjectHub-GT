@@ -1,39 +1,67 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import CustomInput from "../components/CustomInput";
-import wave from "../assets/wave.svg";
 
 const NewProject = () => {
   return (
     <>
-      <section className="min-h-[calc(100vh)] margins h-full flex justify-center items-center">
-        <div className="shadow px-12 py-16 rounded bg-surface-200 w-[700px]">
+      <section className="min-h-[calc(100vh)] h-full flex justify-between items-start px-8">
+        {/* Left Col*/}s
+        <div className="shadow px-8 py-12 rounded bg-surface-200 w-[500px]">
           <div className="flex flex-col gap-y-6">
-            <h2 className="w-full flex justify-center text-text">Login</h2>
-            <div className="flex flex-col gap-y-1.5">
-              <CustomInput
-                placeholder={"Enter your username"}
-                label={"Username"}
-              />
-              <CustomInput placeholder={"asdf"} label={"Password"} />
-              <div className="flex justify-between">
-                <div className="flex items-center gap-x-1">
-                  <input
-                    type="checkbox"
-                    className="mt-0.5 bg-surface-100 rounded-sm border-[3.5px] border-surface-100 appearance-none w-[18px] h-[18px] checked:bg-primary-400 cursor-pointer"
-                  />
-                  <span className="text-sm font-medium group">Remember me</span>
-                </div>
-                <a className="link text-sm">Forgot Password</a>
-              </div>
+            <h2 className="w-full flex justify-center text-text mt-8">Create Project</h2>
+
+            <CustomInput
+              placeholder={"Enter Your Project Name"}
+              label={"Project Name"}
+            />
+
+            <div className="flex gap-x-6 mt-4">
+              <CustomInput placeholder={"Enter First Name"} label={"First Name"} />
+              <CustomInput placeholder={"Enter Last Name"} label={"Last Name"} />
             </div>
 
-            <button className="primary-btn">Login</button>
-            <div className="flex w-full justify-center text-sm gap-x-1">
-              <span>Don't have an account?</span>
-              <a className="link">Sign up</a>
+            <CustomInput
+              placeholder={"Write Your Major Relation"}
+              label={"Major Relation"}
+            />
+
+            <CustomInput
+              placeholder={"Write Your Project Description"}
+              label={"Project Description"}
+              className="h-32 w-full"
+            />
+
+            <div className="flex gap-x-6 mt-4">
+              <CustomInput placeholder={"Enter Start Date"} label={"Start Date"} />
+              <CustomInput placeholder={"Enter End Date"} label={"End Date"} />
+            </div>
+
+            <CustomInput
+              placeholder={"Write Your Required Skills"}
+              label={"Required Skills"}
+              className="h-32 w-full"
+            />
+
+            <button className="primary-btn mt-6">Create Project</button>
+
+            <div className="flex w-full justify-center text-sm gap-x-1 mt-4">
+              <span>Already Have an Account?</span>
+              <a className="link">Login</a>
             </div>
           </div>
+        </div>
+        {/* Right Col */}
+        <div className="w-[300px] flex flex-col items-center justify-center shadow px-8 py-12 rounded bg-surface-200">
+          <h3 className="text-2xl font-semibold mb-4 text-center">Upload Project Image</h3>
+          <p className="text-sm mb-4 text-center text-text mt-8">
+            Please upload an image related to your project.
+          </p>
+          <input
+            id="file-upload"
+            type="file"
+            accept="image/*"
+            className="border border-gray-300 rounded p-2 w-full"
+          />
         </div>
       </section>
     </>
