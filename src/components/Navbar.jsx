@@ -13,8 +13,9 @@ const Navbar = ({ placeholder }) => {
                 </div>
                 
                 <div className="flex gap-x-6 items-center">
-                    <button className="secondary-btn">Sign In</button>
-                    <button className="primary-btn" onClick={() => window.location.href = '/login'}>Login</button>                </div>
+                    <button className="secondary-btn" onClick={() => window.location.href = '/signup'}>Sign Up</button>
+                    <button className="primary-btn" onClick={() => window.location.href = '/login'}>Login</button>
+                    </div>
             </div>
         </nav>
     )
