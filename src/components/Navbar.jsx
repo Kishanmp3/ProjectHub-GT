@@ -9,14 +9,13 @@ const Navbar = ({ placeholder }) => {
                         <button className="navlink">Navlink 1</button>
                         <button className="navlink">Navlink 1</button>
                     </div>
-                    
+
                 </div>
                 
                 <div className="flex gap-x-6 items-center">
-                    <button className="secondary-btn">Sign In</button>
-                    <button className="primary-btn">Login</button>
-                    
-                </div>
+                    <button className="secondary-btn" onClick={() => window.location.href = '/signup'}>Sign Up</button>
+                    <button className="primary-btn" onClick={() => window.location.href = '/login'}>Login</button>
+                    </div>
             </div>
         </nav>
     )
