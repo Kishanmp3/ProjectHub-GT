@@ -6,7 +6,8 @@ export default {
   theme: {
     extend: {
       borderRadius: {
-        DEFAULT: '12px'
+        DEFAULT: '12px',
+        'tile': '1.5rem'
       },
       colors: {
         surface: {

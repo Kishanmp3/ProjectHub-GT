@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Signup from './pages/Signup';
 import LoginLanding from "./pages/LoginLanding";
 import SetNavbar from "./components/NavbarController";
+import MyProjects from "./pages/MyProjects"
 
 
 const AppRouter = () => {
@@ -18,6 +19,7 @@ const AppRouter = () => {
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/loginlanding" element={<LoginLanding />} />
+                <Route path="/myprojects" element={<MyProjects />} />
             </Routes>
         </Router>
         </>
