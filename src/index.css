@@ -3,59 +3,77 @@
 @tailwind utilities;
 
 
+
+
 @layer components {
-    .nav-margins {
-        @apply m-auto w-[min(1020px,calc(100%-12px))];
-    }
-    .navlink {
-        @apply font-semibold text-base px-4 py-2 hover:bg-surface-600/20 rounded duration-200;
-    }
-    .margins {
-        @apply m-auto w-[min(950px,calc(100%-30px))];
-    }
-    .primary-btn {
-        @apply bg-primary-200 rounded-full py-1.5 px-5 font-semibold hover:bg-primary-300 duration-200;
-    }
-    .secondary-btn {
-        @apply hover:text-primary-500 duration-200 font-semibold;
-    }
-    .link {
-        @apply flex text-primary-300 font-medium hover:after:scale-x-100 hover:text-primary-500 cursor-pointer relative after:w-full after:h-0.5 after:top-[calc(100%+2px)] after:scale-x-0 after:duration-300 after:absolute after:bg-primary-600 ;
-    }
+   .nav-margins {
+       @apply m-auto w-[min(1020px,calc(100%-12px))];
+   }
+   .navlink {
+       @apply font-semibold text-base px-4 py-2 hover:bg-surface-600/20 rounded duration-200;
+   }
+   .margins {
+       @apply m-auto w-[min(950px,calc(100%-30px))];
+   }
+   .primary-btn {
+       @apply bg-primary-100 rounded py-2 px-5 font-semibold hover:bg-primary-300 duration-200 text-sm shadow-primary-100 shadow;
+   }
+   .secondary-btn {
+       @apply hover:text-primary-500 duration-200 font-semibold text-sm;
+   }
+   .link {
+       @apply flex text-primary-300 font-medium hover:after:scale-x-100 hover:text-primary-500 cursor-pointer relative after:w-full after:h-0.5 after:top-[calc(100%+2px)] after:scale-x-0 after:duration-300 after:absolute after:bg-primary-600 ;
+   }
+   .dashboard-btn {
+       @apply bg-black rounded-full py-1.5 px-5 font-semibold hover:bg-primary-300 duration-200;
+   }
+   .icon-btn {
+        @apply flex items-center rounded-md justify-center py-0.5 shadow border hover:bg-surface-300 gap-x-1;
+   }
 }
 
 
+
+
 @layer base {
-    html {
-        @apply overflow-y-scroll overflow-x-hidden bg-surface-100 text-text-100;
-    }
+   html {
+       @apply overflow-y-scroll overflow-x-hidden bg-surface-100 text-text-100;
+   }
 
-    h1 {
-        @apply text-text-100 text-4xl font-bold mb-4;
-    }
 
-    h2 {
-        @apply text-text-100 text-3xl font-bold mb-3;
-    }
+   h1 {
+       @apply text-text-100 text-4xl font-bold mb-4;
+   }
 
-    h3 {
-        @apply text-text-100 text-2xl font-semibold mb-2;
-    }
 
-    h4 {
-        @apply text-text-100 text-xl font-medium mb-1;
-    }
+   h2 {
+       @apply text-text-100 text-3xl font-bold mb-3;
+   }
 
-    h5 {
-        @apply text-text-100 text-lg font-normal;
-    }
 
-    h6 {
-        @apply text-text-100 text-base font-normal;
-    }
+   h3 {
+       @apply text-text-100 text-2xl font-semibold mb-2;
+   }
 
-    p {
-        @apply text-text-100 text-base leading-6 mb-4;
-    }
+
+   h4 {
+       @apply text-text-100 text-xl font-medium mb-1;
+   }
+
+
+   h5 {
+       @apply text-text-100 text-lg font-normal;
+   }
+
+
+   h6 {
+       @apply text-text-100 text-base font-normal;
+   }
+
+
+   p {
+       @apply text-text-300 text-sm ;
+   }
+
 
 }
