@@ -3,12 +3,11 @@ import AppRouter from "./AppRouter";
 import Layout from "./layout";
 
 function App() {
-    return (
-        <Layout>
-            <AppRouter />
-        </Layout>
-
-    )
+  return (
+    <Layout>
+      <AppRouter />
+    </Layout>
+  );
 }
 
 export default App;
