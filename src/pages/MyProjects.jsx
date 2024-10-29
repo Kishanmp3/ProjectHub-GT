@@ -1,5 +1,5 @@
 import React from "react";
-import ProjectTile from "../components/PorjectTile";
+import ProjectTile from "../components/ProjectTile";
 import { Link } from "react-router-dom";
 import wave from "../assets/wave.svg";
 
