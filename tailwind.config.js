@@ -4,13 +4,16 @@ export default {
   theme: {
     extend: {
       borderRadius: {
-        DEFAULT: "12px",
+
+        DEFAULT: '12px',
+        'tile': '1.5rem'
       },
       borderColor: {
         DEFAULT: "rgba(68, 68, 68, 1)", // Customize the default border color (this example uses a blue shade)
       },
       borderWidth: {
         DEFAULT: "1.2px",
+
       },
       colors: {
         surface: {
