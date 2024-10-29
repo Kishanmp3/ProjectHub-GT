@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
 import NewProject from "./pages/NewProject";
+import Settings from "./pages/Settings.jsx";
 
 const AppRouter = () => {
   return (
@@ -12,6 +13,7 @@ const AppRouter = () => {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/new-project" element={<NewProject />} />
+          <Route path="/settings" element={<Settings />} />
       </Routes>
     </Router>
   );

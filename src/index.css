@@ -30,6 +30,9 @@
    .icon-btn {
         @apply flex items-center rounded-md justify-center py-0.5 shadow border hover:bg-surface-300 gap-x-1;
    }
+    .settings-box {
+        @apply bg-surface-100 border border-surface-300 p-5 mb-5 rounded-lg shadow-lg;
+    }
 }
 
 
@@ -74,6 +77,7 @@
    p {
        @apply text-text-300 text-sm ;
    }
+
 
 
 }
