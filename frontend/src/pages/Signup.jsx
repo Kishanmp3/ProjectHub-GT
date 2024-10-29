@@ -4,11 +4,9 @@ import CustomInput from "../components/CustomInput";
 import Axios from "axios";
 import wave from "../assets/wave.svg";
 import { useSignUp, useSignIn } from "@clerk/clerk-react";
-import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const Signup = () => {
-
   const { isLoaded, signUp, setActive } = useSignUp();
   const { signIn } = useSignIn();
   const [username, setUsername] = useState("");
@@ -281,8 +279,7 @@ const Signup = () => {
 //     );
 // }
 // =======
-    
+
 // >>>>>>> main
 
 export default Signup;
-

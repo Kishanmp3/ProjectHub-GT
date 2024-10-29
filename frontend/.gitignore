@@ -24,3 +24,7 @@ dist-ssr
 *.sw?
 
 .prettierignore
+
+.env.local
+.env
+
