@@ -1,0 +1,67 @@
+/* Dark mode styling for the date picker container */
+.react-datepicker {
+  background-color: #1A1A1A;
+  border: none;
+  color: #F0F0F0;
+}
+
+/* Header (Month and Year) */
+.react-datepicker__header {
+  background-color: #333;
+  border-bottom: none;
+}
+
+.react-datepicker__current-month {
+  color: #FF6D2C; /* Orange for month and year */
+  font-weight: bold;
+}
+
+/* Day Names */
+.react-datepicker__day-name {
+  color: #FF6D2C; /* Orange color for day names (Su, Mo, Tu, etc.) */
+}
+
+/* Calendar days */
+.react-datepicker__day {
+  color: #F0F0F0; /* Default color for days */
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  background-color: #444444; /* Dark gray highlight for selected day */
+  color: #FF6D2C; /* Orange text for selected day */
+}
+
+.react-datepicker__day:hover {
+  background-color: #555; /* Dark hover effect for days */
+  color: #FF6D2C; /* Orange color on hover */
+}
+
+/* Disabled days */
+.react-datepicker__day--disabled {
+  color: #666;
+}
+
+/* Navigation buttons */
+.react-datepicker__navigation {
+  top: 12px;
+  line-height: 1.7;
+}
+
+.react-datepicker__navigation-icon::before {
+  border-color: #FF6D2C; /* Orange arrows */
+}
+
+/* Selected Hover State */
+.react-datepicker__day--selected:hover {
+  background-color: #555555; /* Slightly lighter dark gray for hover on selected day */
+  color: #FF6D2C;
+}
+
+/* Customizing the font color of the calendar text */
+.react-datepicker__day,
+.react-datepicker__day-name,
+.react-datepicker__current-month {
+  color: #FF6D2C; /* Orange for all text */
+}
+
