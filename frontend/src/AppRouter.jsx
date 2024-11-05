@@ -9,6 +9,7 @@ import LoginLanding from "./pages/LoginLanding";
 import SetNavbar from "./components/NavbarController";
 import MyProjects from "./pages/MyProjects";
 import NewProject from "./pages/NewProject";
+import Browsing from "./pages/Browsing";
 
 const AppRouter = () => {
   return (
@@ -22,6 +23,7 @@ const AppRouter = () => {
           <Route path="/loginlanding" element={<LoginLanding />} />
           <Route path="/myprojects" element={<MyProjects />} />
           <Route path="/new-project" element={<NewProject />} />
+          <Route path="/browsing" element={<Browsing />} />
         </Routes>
       </Router>
     </>
