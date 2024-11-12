@@ -4,13 +4,16 @@ import { Link } from "react-router-dom";
 import wave from "../assets/wave.svg";
 
 const MyProjects = () => {
-    return (
-        <section className="min-h-[calc(100vh)] margins h-full flex justify-center items-center">
-            <img src={wave} className="absolute w-full h-full object-cover z-[-1]" alt="Background Wave"/>
-            <div>
-                <ProjectTile />
-            </div>
-        </section>
-    )
-}
-export default MyProjects
+  return (
+    <section className="margins">
+      <div>
+        <div className="grid grid-cols-3 gap-5">
+          <ProjectTile />
+          <ProjectTile />
+          <ProjectTile />
+        </div>
+      </div>
+    </section>
+  );
+};
+export default MyProjects;
