@@ -1,59 +1,122 @@
 import React, { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import wave from "../assets/wave.svg";
+import ProjectTile from "../components/ProjectTile";
 
 const Browsing = () => {
-    const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
 
-    const projects = [
-        { id: 1, title: "AI Image Classifier", description: "A deep learning model to classify images using TensorFlow." },
-        { id: 2, title: "Chat Application", description: "A real-time chat application using WebSocket and Node.js." },
-        { id: 3, title: "Weather Forecast App", description: "A web application that displays weather forecasts using data from a weather API." },
-        { id: 4, title: "Personal Portfolio Website", description: "A responsive website built with HTML, CSS, and JavaScript to showcase personal projects and skills." },
-        { id: 5, title: "E-commerce Platform", description: "A complete e-commerce platform with product management, cart functionality, and payment integration using React and Firebase." },
-        { id: 6, title: "Task Manager", description: "A task management tool with user authentication and real-time task updates built with MERN stack." },
-        { id: 7, title: "Expense Tracker", description: "An expense tracking application with data visualization features using Chart.js." },
-        { id: 8, title: "Game Development", description: "A 2D platformer game developed using Unity and C#." },
-        { id: 9, title: "IoT Smart Home System", description: "A smart home system prototype that integrates sensors and microcontrollers for remote monitoring using Arduino and MQTT." },
-        { id: 10, title: "Blog Platform", description: "A content management system that allows users to create and manage blog posts using Django." },
-    ];
+  const projects = [
+    {
+      title: "Collaborative Code Editor",
+      creator: "Joe Mama",
+      description:
+        "Building a web-based code editor with real-time collaboration features for developers.",
+      tags: ["Javascript", "React", "Firebase"],
+    },
+    {
+      title: "Autonomous Drone Delivery",
+      creator: "Bob Smith",
+      description:
+        "Developing an autonomous drone for real-time delivery of small packages using computer vision.",
+      tags: ["Python", "TensorFlow", "AWS", "Robotics"],
+    },
+    {
+      title: "Traffic Congestion Predictor",
+      creator: "Catherine Lee",
+      description:
+        "Creating a machine learning pipeline for predicting traffic congestion using live sensor data.",
+      tags: ["Python", "Django", "PostgreSQL", "TensorFlow"],
+    },
+    {
+      title: "Robotic Arm Simulator",
+      creator: "David Miller",
+      description:
+        "Developing a simulation environment for testing robotic arm algorithms in manufacturing.",
+      tags: ["CPlusPlus", "ROS", "Kubernetes"],
+    },
+    {
+      title: "Scalable E-Commerce Platform",
+      creator: "Ella Brown",
+      description:
+        "Building a scalable microservices architecture for an e-commerce platform.",
+      tags: ["NodeJS", "Docker", "MongoDB", "React"],
+    },
+    {
+      title: "AI-Powered Chatbot",
+      creator: "Franklin White",
+      description:
+        "Designing an AI-powered chatbot for customer support with advanced natural language processing.",
+      tags: ["Python", "Flask", "PyTorch", "AWS"],
+    },
+    {
+      title: "Fitness Tracking App",
+      creator: "Grace Williams",
+      description:
+        "Developing a mobile app for tracking fitness goals using gamification techniques.",
+      tags: ["Flutter", "Firebase", "Dart"],
+    },
+    {
+      title: "Robotic Fleet Dashboard",
+      creator: "Hannah Martin",
+      description:
+        "Creating an interactive dashboard for monitoring and optimizing robotic fleets in warehouses.",
+      tags: ["Javascript", "React", "GraphQL", "Robotics"],
+    },
+    {
+      title: "Recommendation Engine",
+      creator: "Isaac Turner",
+      description:
+        "Building a scalable recommendation engine for personalized shopping experiences.",
+      tags: ["Python", "TensorFlow", "Redis", "AWS"],
+    },
+    {
+      title: "Gesture-Controlled IoT",
+      creator: "Julia Roberts",
+      description:
+        "Developing an embedded system for gesture-based control of IoT devices.",
+      tags: ["CPlusPlus", "Arduino", "Linux", "Robotics"],
+    },
+  ];
 
-    const handleSearch = (term) => {
-        setSearchTerm(term.toLowerCase());
-    };
+  const handleSearch = (term) => {
+    setSearchTerm(term.toLowerCase());
+  };
 
-    const filteredProjects = projects.filter((project) =>
-        project.title.toLowerCase().includes(searchTerm) ||
-        project.description.toLowerCase().includes(searchTerm)
-    );
+  const filteredProjects = projects.filter(
+    (project) =>
+      project.title.toLowerCase().includes(searchTerm) ||
+      project.description.toLowerCase().includes(searchTerm)
+  );
 
-    return (
-        <section className="min-h-[calc(100vh)] margins h-full flex flex-col items-center pt-20">
-            <img src={wave} className="absolute w-full h-full object-cover z-[-1]" alt="Background Wave" />
-
-            <div className="w-full max-w-md mb-6 text-center">
-                <div className="mb-2">
-                    <p className="text-xl font-semibold text-black-700">Search</p>
-                    <FaSearch className="text-black-600 text-2xl" />
-                </div>
-                <input
-                    type="text"
-                    value={searchTerm}
-                    onChange={(e) => handleSearch(e.target.value)}
-                    placeholder="Search projects..."
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-gray-500"
-                />
-            </div>
-            <div className="w-full max-w-4xl grid grid-cols-1 gap-4">
-                {filteredProjects.map((project) => (
-                    <div key={project.id} className="bg-gray-100 p-4 rounded-lg shadow-md">
-                        <h3 className="text-black font-bold text-lg">{project.title}</h3>
-                        <p className="text-gray-700">{project.description}</p>
-                    </div>
-                ))}
-            </div>
-        </section>
-    );
+  return (
+    <section className="min-h-[calc(100vh)] margins h-full flex flex-col items-center pt-20">
+      <div className="w-full max-w-md mb-6 text-center">
+        <div className="mb-2">
+          <p className="text-xl font-semibold text-black-700">Search</p>
+          <FaSearch className="text-black-600 text-2xl" />
+        </div>
+        <input
+          type="text"
+          value={searchTerm}
+          onChange={(e) => handleSearch(e.target.value)}
+          placeholder="Search projects..."
+          className="w-full px-4 py-2 border border-gray-300 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-gray-500"
+        />
+      </div>
+      <div className="grid grid-cols-3 gap-5">
+        {filteredProjects.map((project, index) => (
+          <ProjectTile
+            key={index}
+            title={project.title}
+            creator={project.creator}
+            description={project.description}
+            tags={project.tags}
+          />
+        ))}
+      </div>
+    </section>
+  );
 };
 
 export default Browsing;

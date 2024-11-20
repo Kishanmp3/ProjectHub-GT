@@ -54,23 +54,23 @@ const Navbar = ({}) => {
         </div>
 
         <div className="flex gap-x-6 items-center">
-          <SignedIn>
+          <SignedOut>
             <a className="secondary-btn" href="/signup">
               Sign Up
             </a>
             <a className="primary-btn" href="/login">
               Login
             </a>
-          </SignedIn>
+          </SignedOut>
 
-          <SignedOut>
+          <SignedIn>
             <a className="primary-btn" href="/profile">
               Profile
             </a>
             <button className="secondary-btn" onClick={() => handleLogout()}>
               Log Out
             </button>
-          </SignedOut>
+          </SignedIn>
         </div>
       </div>
     </nav>

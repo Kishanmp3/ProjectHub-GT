@@ -46,93 +46,39 @@ const tagColors = {
   Flutter: { backgroundColor: "#02569b", textColor: "#ffffff" },
 };
 
-const ProjectTile = ({ placeholder }) => {
+const ProjectTile = ({ creator, title, description, tags }) => {
   return (
     <div className="bg-surface-200 text-white rounded w-full overflow-hidden">
       <div className="flex flex-col px-3 py-4">
-        {/* <img
-        src="src/assets/DefaultTile.png"
-        className="w-full h-40 object-cover"
-        alt="project picture"
-      /> */}
-
         <div
           className="w-full h-40 bg-yellow-400 rounded"
           alt="project picture"
         />
         <div className="px-1 pt-3 py-4 gap-y-5 flex flex-col">
           <div className="flex flex-col">
-            <h4>CAD startup</h4>
+            <h4>{title}</h4>
             <div className="flex gap-x-2 items-center">
               <div className="rounded-full bg-surface-500 h-5 w-5 aspect-square" />
-              <p>Joe Mama</p>
+              <p>{creator}</p>
             </div>
           </div>
-          <p>
-            Hi I am building a Cad startup where we hope to revolutionize cad
-            for bme majors
-          </p>
-          <div className="flex gap-x-2 items-center">
-            <span
-              className={`py-1 px-3 rounded-full text-xs font-bold cursor-default`}
-              style={{
-                backgroundColor: tagColors["Javascript"].backgroundColor,
-                color: tagColors["Javascript"].textColor,
-              }}
-            >
-              Javascript
-            </span>
-            <span
-              className="py-1 px-3 bg-green-400 rounded-full text-xs font-bold"
-              style={{
-                backgroundColor: tagColors["React"].backgroundColor,
-                color: tagColors["React"].textColor,
-              }}
-            >
-              React
-            </span>
-            <span
-              className="py-1 px-3 bg-green-400 rounded-full text-xs font-bold"
-              style={{
-                backgroundColor: tagColors["Bootstrap"].backgroundColor,
-                color: tagColors["Bootstrap"].textColor,
-              }}
-            >
-              Bootstrap
-            </span>
+          <p>{description}</p>
+          <div className="flex gap-x-2 items-center overflow-x-auto whitespace-nowrap scrollbar-hide">
+            {tags.map((tag) => (
+              <span
+                key={tag}
+                className={`py-1 px-3 rounded-full text-xs font-bold cursor-default`}
+                style={{
+                  backgroundColor: tagColors[tag]?.backgroundColor || "#ccc",
+                  color: tagColors[tag]?.textColor || "#000",
+                }}
+              >
+                {tag}
+              </span>
+            ))}
           </div>
         </div>
       </div>
-
-      {/* <div className="grid grid-cols-2 gap-2">
-        <div>
-          <h4>Cad Startup</h4>
-          <div className="felx justify-between">
-            <div>
-              <p className="w-80 h-1 ml-20 rounded bg-primary-200" />
-              <p className="text-lg font-semibold ml-20 whitespace-pre">
-                Kishan Patel 3rd Year BME
-              </p>
-              <p className="w-80 h-1 ml-20 rounded bg-primary-200" />
-              <p className="text-sm font-normal ml-20 text-wrap">
-                “Hi I am building a Cad startup where we hope to revolutionize
-                cad for bme majors”
-              </p>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div className="flex flex-col items-center text-lg font-semibold">
-            <ul className="list-disc space-y-2 marker:text-primary-200">
-              <li>Bio Medical Engineering</li>
-              <li>3-4 Weekly Hours</li>
-              <li>Skills: Cad, BME, Hardware</li>
-              <li>Start: October 30th</li>
-              <li>3-5 Engineers</li>
-            </ul>
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 };
