@@ -1,9 +1,11 @@
-import React from "react";
-import ProjectTile from "../components/ProjectTile";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { FaSearch } from "react-icons/fa";
 import wave from "../assets/wave.svg";
+import ProjectTile from "../components/ProjectTile";
 
-const MyProjects = () => {
+const Browsing = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+
   const projects = [
     {
       title: "Collaborative Code Editor",
@@ -77,22 +79,44 @@ const MyProjects = () => {
     },
   ];
 
+  const handleSearch = (term) => {
+    setSearchTerm(term.toLowerCase());
+  };
+
+  const filteredProjects = projects.filter(
+    (project) =>
+      project.title.toLowerCase().includes(searchTerm) ||
+      project.description.toLowerCase().includes(searchTerm)
+  );
+
   return (
-    <section className="margins">
-      <div>
-        <div className="grid grid-cols-3 gap-5">
-          {projects.map((project, index) => (
-            <ProjectTile
-              key={index}
-              title={project.title}
-              creator={project.creator}
-              description={project.description}
-              tags={project.tags}
-            />
-          ))}
+    <section className="min-h-[calc(100vh)] margins h-full flex flex-col items-center pt-20">
+      <div className="w-full max-w-md mb-6 text-center">
+        <div className="mb-2">
+          <p className="text-xl font-semibold text-black-700">Search</p>
+          <FaSearch className="text-black-600 text-2xl" />
         </div>
+        <input
+          type="text"
+          value={searchTerm}
+          onChange={(e) => handleSearch(e.target.value)}
+          placeholder="Search projects..."
+          className="w-full px-4 py-2 border border-gray-300 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-gray-500"
+        />
+      </div>
+      <div className="grid grid-cols-3 gap-5">
+        {filteredProjects.map((project, index) => (
+          <ProjectTile
+            key={index}
+            title={project.title}
+            creator={project.creator}
+            description={project.description}
+            tags={project.tags}
+          />
+        ))}
       </div>
     </section>
   );
 };
-export default MyProjects;
+
+export default Browsing;

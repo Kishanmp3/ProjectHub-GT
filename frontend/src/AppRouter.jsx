@@ -6,16 +6,16 @@ import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Signup from "./pages/Signup";
 import LoginLanding from "./pages/LoginLanding";
-import SetNavbar from "./components/NavbarController";
 import MyProjects from "./pages/MyProjects";
 import NewProject from "./pages/NewProject";
+
 import Settings from "./pages/Settings";
+import Browsing from "./pages/Browsing";
 
 const AppRouter = () => {
   return (
     <>
       <Router>
-        <SetNavbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
@@ -24,6 +24,7 @@ const AppRouter = () => {
           <Route path="/myprojects" element={<MyProjects />} />
           <Route path="/new-project" element={<NewProject />} />
           <Route path="/settings" element={<Settings />} />
+          <Route path="/browsing" element={<Browsing />} />
         </Routes>
       </Router>
     </>
