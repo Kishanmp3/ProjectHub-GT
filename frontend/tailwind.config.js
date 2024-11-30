@@ -41,6 +41,10 @@ export default {
           600: "rgba(128, 128, 128, 1)",
         },
       },
+      boxShadow: {
+        'glow': '0 0 5px rgba(255, 255, 255, 0.5)',
+        'selected-glow': '0 0 10px rgba(255, 255, 255, 0.7)'
+      },
     },
   },
   plugins: [],

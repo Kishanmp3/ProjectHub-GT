@@ -8,6 +8,8 @@ import Signup from "./pages/Signup";
 import LoginLanding from "./pages/LoginLanding";
 import MyProjects from "./pages/MyProjects";
 import NewProject from "./pages/NewProject";
+
+import Settings from "./pages/Settings";
 import Browsing from "./pages/Browsing";
 
 const AppRouter = () => {
@@ -21,6 +23,7 @@ const AppRouter = () => {
           <Route path="/loginlanding" element={<LoginLanding />} />
           <Route path="/myprojects" element={<MyProjects />} />
           <Route path="/new-project" element={<NewProject />} />
+          <Route path="/settings" element={<Settings />} />
           <Route path="/browsing" element={<Browsing />} />
         </Routes>
       </Router>
